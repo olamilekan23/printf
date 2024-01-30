@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * print_bin - concerts to binary
+ * @val: argument
+ * Return: integer
+ */
 int print_bin(va_list val)
 {
 	int flag = 0;
@@ -15,6 +19,15 @@ int print_bin(va_list val)
 			flag = 1;
 		if (flag)
 		{
-
+			b = p >> (31 - i);
+			_putchar(b + 48);
+			count++;
+		}
 	}
+	if (count == 0)
+	{
+		count++;
+		_putchar('0');
+	}
+	return (count);
 }
